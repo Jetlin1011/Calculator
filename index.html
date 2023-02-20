@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/848241403b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+        <div class=" calculator_body " >
+
+
+
+            <div class="row  result_div1" >
+                <div class="col-12 result_div2"style="height:74px; padding:-3px; margin-bottom:10px;">
+                    <!-- <p class="result ">j</p> -->
+                    <form action="">
+                        <input type="text" id="result" placeholder="|" class="form-control-md result">
+                    </form>
+                </div>
+            </div>
+
+
+<!-- first row of numbers -->
+
+            <div class="row mx-1 ">
+                <div class="col-3     ac_div  ">
+                    <button onclick="allClear()" class="AC text-center  top_botton  ">AC</button>
+                </div>
+
+                <div class="col-3 switch backspace_div">
+                    <button onclick="backSpace()" class="backspace text-center top_botton  "><i class="fa-solid fa-delete-left"></i></button>
+                </div>
+                <div class="col-3 switch modulus">
+                    <button onclick="displayNum('!')" class="modulus text-center top_botton ">+/-</button>
+                </div>
+                <div class="col-3 switch division_div ">
+                    <button onclick="displayNum('/')" class="division text-center operators ">/</button>
+                </div>
+            </div>
+            <!-- second row of nummbers -->
+
+            <div class="row mx-1 ">
+                <div class="col-3     ac_div  ">
+                    <button onclick="displayNum(7)" class="AC text-center button_num">7</button>
+                </div>
+
+                <div class="col-3 switch backspace_div">
+                    <button onclick="displayNum(8)" class="backspace text-center button_num">8</button>
+                </div>
+                <div class="col-3 switch modulus">
+                    <button onclick="displayNum(9)" class="modulus text-center button_num">9</button>
+                </div>
+                <div class="col-3 switch division_div ">
+                    <button onclick="displayNum('*')" class="division text-center operators ">X</button>
+                </div>
+            </div>
+            <!-- third row -->
+
+            <div class="row mx-1 ">
+                <div class="col-3     ac_div  ">
+                    <button onclick="displayNum(4)" class="AC text-center button_num">4</button>
+                </div>
+
+                <div class="col-3 switch backspace_div">
+                    <button onclick="displayNum(5)" class="backspace text-center button_num">5</button>
+                </div>
+                <div class="col-3 switch modulus">
+                    <button onclick="displayNum(6)" class="modulus text-center button_num">6</button>
+                </div>
+                <div class="col-3 switch division_div ">
+                    <button onclick="displayNum('-')" class="division text-center operators ">-</button>
+                </div>
+            </div>
+
+            <!-- fourth row -->
+            <div class="row mx-1 ">
+                <div class="col-3   switch  ac_div  ">
+                    <button onclick="displayNum(1)" class="AC text-center button_num">1</button>
+                </div>
+
+                <div class="col-3 switch backspace_div">
+                    <button onclick="displayNum(2)" class="backspace text-center button_num">2</button>
+                </div>
+                <div class="col-3 switch modulus">
+                    <button onclick="displayNum(3)" class="modulus text-center button_num">3</button>
+                </div>
+                <div class="col-3 switch division_div ">
+                    <button onclick="displayNum('+')" class="division text-center  operators">+</button>
+                </div>
+            </div>
+
+            <!-- fifth row -->
+            <div class="row mx-1 ">
+                <div class="col-6     ac_div  ">
+                    <button onclick="displayNum(0)" class="button_0 text-center rounded-pill button_num">0</button>
+                </div>
+
+                <div class="col-3 switch modulus">
+                    <button onclick="displayNum('.')" class="modulus button_num text-center ">.</button>
+                </div>
+                <div class="col-3 switch division_div ">
+                    <button onclick="evaluateExpr()" class="division text-center  operators">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./calc.js"></script>
+</body>
+
+</html>
